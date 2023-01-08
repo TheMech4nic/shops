@@ -1,0 +1,55 @@
+body {
+  margin: 2px;
+  
+  padding: 2px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar-nav li a{
+  font-size: 17px;
+}
+
+.navbar-brand{
+  letter-spacing: 3px;
+  font-size: 25px;
+}
+
+.card-img-top{
+  height: 350px;
+  width: 350px;
+  
+}
+
+.card{
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease;
+  
+}
+
+.card:hover{
+  transform: scale(1.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form{
+  justify-content: center;
+}
+
+.product img {
+  transition: all 0.5s ease;
+}
+
+.product img:hover{
+  transform : scale(1.1)
+}
