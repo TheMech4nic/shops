@@ -2,20 +2,23 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import DATA from './DATA';
 import { useDispatch } from 'react-redux';
-import { addItem, delItem} from "../redux/actions/index"
+import { add, remove } from '../store/cartSlice';
+
 
 const ProductDetail = () => {
-    const [cartBtn, setcartBtn] = useState();
+    const [cartBtn, setcartBtn] = useState("Add to cart");
     const proid = useParams();
     const proDetails = DATA.filter(x=>x.id == proid.id);
     const product = proDetails[0];
     const dispatch = useDispatch()
+    let sel_pro = [];
     const handleCart = (product) =>{
         if(cartBtn === "Add to cart"){
-            dispatch(addItem(product))
+            dispatch(add(product))
+            sel_pro.push(localStorage.setItem('Selected_Product', JSON.stringify(product)))
             setcartBtn("Remove from cart")
         }else{
-            dispatch(delItem(product))
+            dispatch(remove(product.id))
             setcartBtn("Add to cart")
         }
 

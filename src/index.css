@@ -53,3 +53,8 @@ code {
 .product img:hover{
   transform : scale(1.1)
 }
+
+.cartImg{
+  height: 250px;
+  
+}

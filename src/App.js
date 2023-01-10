@@ -8,6 +8,7 @@ import { Container } from 'react-bootstrap';
 import {  Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import ProductDetail from './components/ProductDetail';
+import Cart from './components/Cart'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/product' element={<Product />} />
         <Route path='/product/:id' element={<ProductDetail />} />
         <Route path='/about' element ={<About />} />
+        <Route path='/cart' element ={<Cart />} />
         <Route path='/contact' element={<Contact />} />
         </Routes>
       </Container>
